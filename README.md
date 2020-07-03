@@ -5,6 +5,7 @@ A .NET Core Brawl Stars Server for version 26
 ## Configuration
 You can change default name in config.json
 (```"default_name": "YOUR_NAME"```)
+And you can change the starting resources in config.json
 
 ## Client
 To connect to your server, you need a custom client. Here the only solution is to use a [pre-made client](https://drive.google.com/file/d/13CevFvqsLW2xzjEEOWGSh__1xRSXJmFh/view?usp=sharing).
