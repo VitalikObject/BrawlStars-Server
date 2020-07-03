@@ -4,5 +4,8 @@
   "mysql_server": "127.0.0.1",
   "mysql_user": "root",
   "server_port": 9339,
-  "default_name": "Mr Vitalik"
+  "default_name": "Mr Vitalik",
+  "default_gold": 99999,
+  "default_gems": 99999,
+  "default_trophies": 99999
 }
