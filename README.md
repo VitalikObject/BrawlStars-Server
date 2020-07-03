@@ -1,6 +1,6 @@
 # ObjectBrawl
 A .NET Core Brawl Stars Server for version 26
-![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/728649698470264902/Screenshot_20200703-193242_BS_v26.jpg) 
+![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/728667043397632010/Screenshot_20200703-204228_BS_v26.jpg) 
 
 ## Configuration
 You can change default name in config.json
