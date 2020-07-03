@@ -1,4 +1,4 @@
-# ObjectBrawl ![.NET Core]
+# ObjectBrawl !
 A .NET Core Brawl Stars Server for version 26
 
 ## Why?
