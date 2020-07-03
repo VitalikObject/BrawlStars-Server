@@ -1,9 +1,6 @@
 # ObjectBrawl
 A .NET Core Brawl Stars Server for version 26
-![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/728649698470264902/Screenshot_20200703-193242_BS_v26.jpg)
-
-## Why?
-We have seen way less private servers in the past, why? Because supercell has made it way harder to create a custom client. But thanks to Ultrapowa and many other people, there is still a chance for private servers. So here it is, sadly they are all not open source or not help anyone else to create such a project. 
+![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/728649698470264902/Screenshot_20200703-193242_BS_v26.jpg) 
 
 ## Configuration
 You can change default name in config.json
