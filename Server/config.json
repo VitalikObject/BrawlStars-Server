@@ -1,0 +1,8 @@
+{
+  "mysql_database": "bsdb",
+  "mysql_password": "",
+  "mysql_server": "127.0.0.1",
+  "mysql_user": "root",
+  "server_port": 9339,
+  "default_name": "Mr Vitalik"
+}
