@@ -6,6 +6,7 @@ We have seen way less private servers in the past, why? Because supercell has ma
 
 ## Configuration
 You can change default name in config.json
+(```"default_name": "Mr Vitalik"```)
 
 ## Client
 To connect to your server, you need a custom client. Here the only solution is to use a [pre-made client](https://drive.google.com/file/d/13CevFvqsLW2xzjEEOWGSh__1xRSXJmFh/view?usp=sharing).
