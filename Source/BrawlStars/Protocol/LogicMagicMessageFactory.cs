@@ -18,6 +18,7 @@ namespace BrawlStars.Protocol
                 {10101, typeof(LoginMessage)},
                 {10108, typeof(KeepAliveMessage)},
                 {10110, typeof(AnalyticsEventMessage)},
+                {14109, typeof(ExitMessage)}
             };
         }
     }
