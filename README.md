@@ -1,4 +1,4 @@
-# ObjectBrawl
+# ObjectBrawl![.NET Core](https://github.com/VitalikObject/BrawlStars-Server/workflows/.NET%20Core/badge.svg?branch=master)
 A first open source .NET Core Brawl Stars Server for version 26!
 ![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/728667043397632010/Screenshot_20200703-204228_BS_v26.jpg) 
 
