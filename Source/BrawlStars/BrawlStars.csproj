@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <LangVersion>7.3</LangVersion>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationIcon>server.ico</ApplicationIcon>
+    <AssemblyName>BrawlStars</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Protocol\Commands\Client\**" />
+    <Compile Remove="Protocol\Messages\Client\Alliance\**" />
+    <Compile Remove="Protocol\Messages\Client\Home\**" />
+    <Compile Remove="Protocol\Messages\Client\Ranking\**" />
+    <Compile Remove="Protocol\Messages\Server\Alliance\**" />
+    <Compile Remove="Protocol\Messages\Server\Ranking\**" />
+    <EmbeddedResource Remove="Protocol\Commands\Client\**" />
+    <EmbeddedResource Remove="Protocol\Messages\Client\Alliance\**" />
+    <EmbeddedResource Remove="Protocol\Messages\Client\Home\**" />
+    <EmbeddedResource Remove="Protocol\Messages\Client\Ranking\**" />
+    <EmbeddedResource Remove="Protocol\Messages\Server\Alliance\**" />
+    <EmbeddedResource Remove="Protocol\Messages\Server\Ranking\**" />
+    <None Remove="Protocol\Commands\Client\**" />
+    <None Remove="Protocol\Messages\Client\Alliance\**" />
+    <None Remove="Protocol\Messages\Client\Home\**" />
+    <None Remove="Protocol\Messages\Client\Ranking\**" />
+    <None Remove="Protocol\Messages\Server\Alliance\**" />
+    <None Remove="Protocol\Messages\Server\Ranking\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.10" />
+    <PackageReference Include="DotNetty.Buffers" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Common" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Handlers" Version="0.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NLog" Version="4.6.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="GameAssets\database.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GameAssets\fingerprint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GameAssets\starting_home.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BrawlStars.Utilities\BrawlStars.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logic\Home\StreamEntry\Entries\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties gameassets_4starting_3home_1json__JsonSchema="http://json-schema.org/draft-04/schema" /></VisualStudio></ProjectExtensions>
+
+</Project>

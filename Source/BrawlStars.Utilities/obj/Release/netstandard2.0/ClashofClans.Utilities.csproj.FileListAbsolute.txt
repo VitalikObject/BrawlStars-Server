@@ -1,0 +1,9 @@
+E:\20Clash-master\src\ClashofClans.Utilities\bin\Release\netstandard2.0\ClashofClans.Utilities.deps.json
+E:\20Clash-master\src\ClashofClans.Utilities\bin\Release\netstandard2.0\ClashofClans.Utilities.dll
+E:\20Clash-master\src\ClashofClans.Utilities\bin\Release\netstandard2.0\ClashofClans.Utilities.pdb
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.csprojAssemblyReference.cache
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.csproj.CoreCompileInputs.cache
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.AssemblyInfoInputs.cache
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.AssemblyInfo.cs
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.dll
+E:\20Clash-master\src\ClashofClans.Utilities\obj\Release\netstandard2.0\ClashofClans.Utilities.pdb
