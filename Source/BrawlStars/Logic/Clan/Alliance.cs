@@ -211,7 +211,7 @@ namespace BrawlStars.Logic.Clan
             Logger.Log($"Alliance {Id} saved in {st.ElapsedMilliseconds}ms.", GetType(), Logger.ErrorLevel.Debug);
 #else
             //await Redis.CacheAsync(this);
-            await AllianceDb.SaveAsync(this);
+            //await AllianceDb.SaveAsync(this);
 #endif
         }
     }
