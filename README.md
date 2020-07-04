@@ -15,6 +15,6 @@ Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libgg.config.so
 ### Friendly reminder
 The server is in a very early state. Right now, it is NOT recommended to run this on a production environment. Please not open issues about missing features, i'm well aware of this. 
 
-#### Need help? Join my [Discord](https://discord.gg/VPWMxWm)
-
 #### Thank you [Incredible](http://github.com/Incr3dible/) for yours [20Clash](https://github.com/Incr3dible/20Clash)
+
+#### Need help? Join my [Discord](https://discord.gg/VPWMxWm)
