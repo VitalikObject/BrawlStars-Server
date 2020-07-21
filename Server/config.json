@@ -7,5 +7,6 @@
   "default_name": "Mr Vitalik",
   "default_gold": 99999,
   "default_gems": 99999,
-  "default_trophies": 99999
+  "default_trophies": 99999,
+  "default_starpoints": 99999
 }
