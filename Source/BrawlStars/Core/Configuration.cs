@@ -25,6 +25,7 @@ namespace BrawlStars.Core
         [JsonProperty("default_gold")] public int Gold = 99999;
         [JsonProperty("default_gems")] public int Gems = 99999;
         [JsonProperty("default_trophies")] public int Trophies = 99999;
+        [JsonProperty("default_starpoints")] public int Points = 99999;
 
         /// <summary>
         ///     Loads the configuration
@@ -45,6 +46,7 @@ namespace BrawlStars.Core
                     Gold = config.Gold;
                     Gems = config.Gems;
                     Trophies = config.Trophies;
+                    Points = config.Points;
                 }
                 catch (Exception)
                 {
