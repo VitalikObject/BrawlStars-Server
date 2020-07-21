@@ -33,6 +33,7 @@ namespace BrawlStars
         public static int Gold { get; set; }
         public static int Gems { get; set; }
         public static int Trophies { get; set; }
+        public static int Points { get; set; }
 
         public static async void Initialize()
         {
@@ -76,6 +77,8 @@ namespace BrawlStars
             Gold = Configuration.Gold;
 
             Gems = Configuration.Gems;
+            
+            Points = Configuration.Points;
 
             Trophies = Configuration.Trophies;
             await Task.Run(Netty.RunServerAsync);
