@@ -28,7 +28,7 @@ namespace BrawlStars.Protocol.Messages.Client.Login
 
         public override void Decode()
         {
-            /*UserId = Reader.ReadLong();
+            UserId = Reader.ReadLong();
             UserToken = Reader.ReadScString();
 
             ClientMajorVersion = Reader.ReadInt();
@@ -37,7 +37,7 @@ namespace BrawlStars.Protocol.Messages.Client.Login
 
             FingerprintSha = Reader.ReadScString();
 
-            Reader.ReadScString(); // empty
+            /*Reader.ReadScString(); // empty
             Reader.ReadScString();
             Reader.ReadScString(); // empty
             Reader.ReadScString(); // Device
@@ -62,19 +62,33 @@ namespace BrawlStars.Protocol.Messages.Client.Login
 
         public override async void Process()
         {
-            var player = await Resources.Players.Login(UserId, UserToken);
+            if (Resources.Configuration.UseContentPatch)
+                if (FingerprintSha != Resources.Fingerprint.Sha)
+                {
+                    await new LoginFailedMessage(Device)
+                    {
+                        ErrorCode = 7,
+                        ContentUrl = Resources.Configuration.PatchUrl,
+                        ResourceFingerprintData = Resources.Fingerprint.Json
+                    }.SendAsync();
+                    return;
+                }
+            //var player = await Resources.Players.Login(UserId, UserToken);
+            var player = 1;
 
             if (player != null)
             {
                 Program.Version = 1;
-                Device.Player = player;
-                player.Device = Device;
+                /*Device.Player = player;
+                player.Device = Device;*/
+
+                await new Copyright(Device).SendAsync();
 
                 await new LoginOkMessage(Device).SendAsync();
 
                 var ip = Device.GetIp();
 
-                if (UserId <= 0) player.Home.CreatedIpAddress = ip;
+                //if (UserId <= 0) player.Home.CreatedIpAddress = ip;
 
                 //Device.Player.Home.PreferredDeviceLanguage = PreferredDeviceLanguage;
 
@@ -84,10 +98,22 @@ namespace BrawlStars.Protocol.Messages.Client.Login
                 session.Location = await Location.GetByIpAsync(ip);
                 session.SessionId = Guid.NewGuid().ToString();
                 session.StartDate = session.SessionStart.ToString(CultureInfo.InvariantCulture);
+                /*if(ClientMajorVersion != 27)
+                {
+                    await new LoginFailedMessage(Device)
+                    {
+                        Reason =
+                        "Update avaible!"
+                    }.SendAsync();
+                }*/
+                //player.Home.TotalSessions++;
 
-                player.Home.TotalSessions++;
+                // TESTING:
+                //player.Home.FastForward((int) DateTime.UtcNow.Subtract(player.Home.LastSaveTime).TotalSeconds);
                 
                 await new OwnHomeDataMessage(Device).SendAsync();
+
+                await new ClubOHD(Device).SendAsync();
                 //await new AvatarStreamMessage(Device).SendAsync();
             }
             else

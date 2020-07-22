@@ -29,9 +29,6 @@ namespace BrawlStars.Protocol
         public int Length { get; set; }
         public ushort Version { get; set; }
         public bool Save { get; set; }
-        public bool IsServerToClientMessage => Id - 0x4E20 > 0x00;
-
-        public bool IsClientToServerMessage => Id - 0x2710 < 0x2710;
 
         public virtual void Decode()
         {
@@ -66,22 +63,14 @@ namespace BrawlStars.Protocol
             }
             catch (Exception)
             {
-                Logger.Log($"Failed to send {Id}.", GetType(), Logger.ErrorLevel.Debug);
+                //Logger.Log($"Failed to send {Id}.", GetType(), Logger.ErrorLevel.Debug);
             }
         }
 
         public override string ToString()
         {
-            var builder = new StringBuilder();
-            builder.Append($"PACKET ID: {Id}, ");
-            builder.Append($"PACKET LENGTH: {Length}, ");
-            builder.Append($"PACKET VERSION: {Version}, ");
-            builder.Append($"STC: {IsServerToClientMessage}, ");
-            builder.Append($"CTS: {IsClientToServerMessage}, ");
             Reader.SetReaderIndex(7);
-            builder.Append($"Content: {ByteBufferUtil.HexDump(Reader.ReadBytes(Length))}");
-            Reader.SetReaderIndex(7);
-            return builder.ToString();
+            return ByteBufferUtil.HexDump(Reader.ReadBytes(Length));
         }
     }
 }

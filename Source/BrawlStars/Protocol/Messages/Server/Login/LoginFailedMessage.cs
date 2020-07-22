@@ -31,12 +31,17 @@ namespace BrawlStars.Protocol.Messages.Server
         public override void Encode()
         {
             Writer.WriteInt(ErrorCode); // ErrorCode
-            Writer.WriteScString(ResourceFingerprintData); // Fingerprint
+            Writer.WriteScString(ResourceFingerprintData);
             Writer.WriteScString(null);
-            Writer.WriteScString(ContentUrl); // Content URL
+            Writer.WriteScString(ContentUrl);
             Writer.WriteScString(UpdateUrl); // Update URL
             Writer.WriteScString(Reason);
-            Writer.WriteInt(SecondsUntilMaintenanceEnds);
+            Writer.WriteHex("2E0000012C000000000000000000");
+            Writer.WriteScString(null);
+            Writer.WriteScString(null);
+            Writer.WriteScString(null);
+            Writer.WriteScString(null);
+            Writer.WriteHex("00FFFF0000000000");
         }
     }
 }
