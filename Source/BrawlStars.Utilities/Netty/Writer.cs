@@ -34,6 +34,7 @@ namespace BrawlStars.Utilities.Netty
                 buffer.WriteString(value, Encoding.UTF8);
             }
         }
+
         /// <summary>
         ///     Encodes a VInt
         /// </summary>
@@ -60,6 +61,18 @@ namespace BrawlStars.Utilities.Netty
                 buffer.WriteByte((value & 0x7F) | ((flipped >>= 7) != 0 ? 0x80 : 0));
                 value >>= 7;
             } while (flipped != 0);
+        }
+
+        /// <summary>
+        ///     Encode a ScId
+        /// </summary>
+        /// <param name="buffer"></param>
+        /// <param name="high"></param>
+        /// <param name="low"></param>
+        public static void WriteScId(this IByteBuffer buffer, int high, int low)
+        {
+            Writer.WriteVInt(buffer, high);
+            Writer.WriteVInt(buffer, low);
         }
 
         /// <summary>
