@@ -22,11 +22,10 @@ namespace BrawlStars.Core
         [JsonProperty("mysql_user")] public string MySqlUserId = "root";
         [JsonProperty("server_port")] public int ServerPort = 9339;
         [JsonProperty("default_name")] public string Name = "";
-        [JsonProperty("default_gold")] public int Gold = 99999;
-        [JsonProperty("default_gems")] public int Gems = 99999;
+        [JsonProperty("default_region")] public string Region = "";
         [JsonProperty("default_trophies")] public int Trophies = 99999;
-        [JsonProperty("default_starpoints")] public int Points = 99999;
-
+        [JsonProperty("patch_url")] public string PatchUrl = "";
+        [JsonProperty("use_content_patch")] public bool UseContentPatch;
         /// <summary>
         ///     Loads the configuration
         /// </summary>
@@ -43,10 +42,10 @@ namespace BrawlStars.Core
                     MySqlDatabase = config.MySqlDatabase;
                     ServerPort = config.ServerPort;
                     Name = config.Name;
-                    Gold = config.Gold;
-                    Gems = config.Gems;
+                    Region = config.Region;
                     Trophies = config.Trophies;
-                    Points = config.Points;
+                    PatchUrl = config.PatchUrl;
+                    UseContentPatch = config.UseContentPatch;
                 }
                 catch (Exception)
                 {
