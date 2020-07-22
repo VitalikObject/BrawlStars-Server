@@ -261,7 +261,7 @@ namespace BrawlStars.Protocol.Messages.Server
             Writer.WriteScString("ObjectBrawlBot");
             Writer.WriteVInt(100);
             Writer.WriteVInt(28000015);
-            Writer.WriteVInt(43000012);
+            Writer.WriteVInt(43000010);
             Writer.WriteVInt(1);
             Writer.WriteVInt(0);
             Writer.WriteVInt(0);
