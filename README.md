@@ -17,4 +17,4 @@ The server is in a very early state. Right now, it is NOT recommended to run thi
 
 #### Thank you [Incredible](http://github.com/Incr3dible/) for yours [20Clash](https://github.com/Incr3dible/20Clash)
 
-#### Need help? Join [Huza's Discord channel](https://discord.gg/VPWMxWm) or [Antz's Discord channel](https://discord.com/invite/RgYcF3b)
+#### Need help? Join [My Discord channel](https://discord.gg/4FZrUFK4C6)
